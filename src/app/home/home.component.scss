@@ -1,0 +1,73 @@
+$bg-image: '/assets/images/svg/bg-diff.svg';
+#home{
+    width: 100%;
+    padding-top: 40vh;
+    a{
+     &:hover{
+        -webkit-animation: html 2s ease-in-out;
+     }   
+    }
+    &::after {
+        content: "";
+        background: url($bg-image);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+    }
+    
+    .logo-bume{
+        margin-top: 6vh;
+        margin-right: 5vw;
+
+        &:hover{
+            animation-duration: 6s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+        }
+    }
+    .space-button{
+        margin-top: 5vh;
+        margin-left: 1vw;
+    }
+    .content{
+        padding-top: 10vh;
+    }
+    .btn-bume{
+        color: #ef4136;
+        font-size: 25px;
+        font-weight: 200;
+        padding: 20px;
+        background: #ffffff00;
+        outline: hidden;
+        &:hover{
+            animation-duration: 6s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            background:  rgb(239, 65, 54);
+            color: #fff;
+        }
+    }
+
+
+    .line {
+        width: 1px;
+        height: 150px;
+        opacity: 0.19;
+        margin-top: 8px;
+        margin-left: 0px;
+        margin-right: 35px;
+        background-image: linear-gradient(to bottom,
+          rgba(239, 65, 54, 0),
+          #747474 51%,
+          rgba(78, 78, 78, 0));
+      }
+}
+
+
+
