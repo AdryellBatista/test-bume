@@ -1,0 +1,37 @@
+<div id="assignment-home">
+
+    <div class="d-flex">
+        <div class="col-md-6 line">
+            <div class="sub">você possui</div>
+            <div class="value">{{assignmentList ? assignmentList?.length : 0}}</div>
+            <div class="foot">tarefas</div>
+        </div>
+        <!-- <div class="col-md-2">
+                
+        </div> -->
+        <div class="col-md-6">
+            <div class="sub">tarefas de hoje:</div>
+            <div class="value">{{assignmentToday ? assignmentToday.length : 0}}</div>
+            <div class="foot">{{currentDate | date}}</div>
+        </div>        
+    </div>
+
+    <div class="d-flex">
+        <div class="col-md-12 footer">
+            <button class="btn btn-white" (click)="goTo('assignment/form/_')">
+                <div class="d-flex">
+                    <div class="icone"><i class="material-icons">add</i></div>
+                    <div>nova tarefa</div>
+                </div>
+            </button>
+
+            <button class="btn btn-white b2" (click)="goTo('assignment/list')">
+                <div class="d-flex">
+                    <div class="icone"><i class="material-icons">view_headline</i></div>
+                    <div>listar tarefas</div>
+                </div>
+            </button>
+        </div>
+    </div>
+    
+</div>

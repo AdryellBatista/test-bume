@@ -1,12 +1,7 @@
-$bg-image: '/assets/images/svg/bg-diff.svg';
 #home{
-    width: 100%;
-    padding-top: 40vh;
-    a{
-     &:hover{
-        -webkit-animation: html 2s ease-in-out;
-     }   
-    }
+
+    $bg-image: '/assets/images/svg/bg-diff.svg';
+    
     &::after {
         content: "";
         background: url($bg-image);
@@ -20,9 +15,12 @@ $bg-image: '/assets/images/svg/bg-diff.svg';
         position: absolute;
         z-index: -1;   
     }
+
+    width: 100%;
+    padding-top: 37vh;
     
     .logo-bume{
-        margin-top: 6vh;
+        margin-top: 10vh;
         margin-right: 5vw;
 
         &:hover{
@@ -32,7 +30,7 @@ $bg-image: '/assets/images/svg/bg-diff.svg';
         }
     }
     .space-button{
-        margin-top: 5vh;
+        margin-top: 8.5vh;
         margin-left: 1vw;
     }
     .content{
@@ -42,6 +40,8 @@ $bg-image: '/assets/images/svg/bg-diff.svg';
         color: #ef4136;
         font-size: 25px;
         font-weight: 200;
+        border-radius: 100px;
+        font-family: 'Work Sans', sans-serif; 
         padding: 20px;
         background: #ffffff00;
         outline: hidden;
@@ -54,10 +54,9 @@ $bg-image: '/assets/images/svg/bg-diff.svg';
         }
     }
 
-
     .line {
         width: 1px;
-        height: 150px;
+        height: 200px;
         opacity: 0.19;
         margin-top: 8px;
         margin-left: 0px;

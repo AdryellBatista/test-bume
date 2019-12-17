@@ -1,0 +1,58 @@
+<div id="assignment-list">
+    <div class="d-flex">
+        <!-- <i class="material-icons">reply</i> -->
+        <div class="title">
+            gerenciador de tarefas
+        </div>
+    </div>
+
+    <div class="table-assignement">
+        <div class="d-flex">
+            <div class="form-input">
+                <form [formGroup]="valueSearch">
+                    <input class="input-filter" type="text" placeholder="pesquisar tarefa..." (keyup)="filter();" formControlName="text">
+                </form>
+            </div>
+            <button class="btn btn-gray" (click)="toBack()">
+                <div class="d-flex">
+                    <div class="icone"><i class="material-icons">navigate_before</i></div>
+                    <div>voltar</div>
+                </div>
+            </button>
+            <button class="btn btn-white" (click)="goTo('add')">
+                <div class="d-flex">
+                    <div class="icone"><i class="material-icons">add</i></div>
+                    <div>nova tarefa</div>
+                </div>
+            </button>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="cp" (click)="order('id')">id</th>
+                    <th class="cp" (click)="order('title')">título</th>
+                    <th class="cp" (click)="order('description')">descricão</th>
+                    <th class="cp" style="text-align: center;" (click)="order('create_date')">data</th>
+                    <th class="cp" style="text-align: center;" (click)="order('priority')">prioridade</th>
+                    <th class="cp" style="text-align: center;" (click)="order('status')">status</th>
+                    <th style="text-align: center;">ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of assignmentsList">
+                    <td > {{item.id}}</td>
+                    <td [innerHTML]="item.title | strongStr: this.valueSearch.controls.text.value"></td>
+                    <td [innerHTML]="item.description | strongStr: this.valueSearch.controls.text.value"></td>
+                    <td style="text-align: center;">{{item.create_date | date:'dd/MM/yyyy'}}</td>
+                    <td style="text-align: center;">{{item.priority}}</td>
+                    <td style="text-align: center;">{{item.status ? 'concluída' : 'aberta'  }}</td>
+                    <td style="text-align: center;">
+                        <i class="material-icons icons-action" (click)="goTo('edit', item.id)">remove_red_eye</i>
+                        <i class="material-icons icons-action" (click)="goTo('edit', item.id)">edit</i>
+                        <i class="material-icons icons-action t" (click)="deleteAssignment(item.id)">delete_outline</i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

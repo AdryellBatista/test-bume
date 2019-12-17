@@ -1,0 +1,119 @@
+#assignment-list{
+    font-family: 'Work Sans', sans-serif; 
+    .title{
+        padding-top: 50px;
+        color: #ef4136;
+        font-size: 50px;
+        font-weight: 200;
+        width: 950%;
+        text-align: center;
+    }
+
+    .table-assignement{
+        padding: 40px 70px 40px 70px;
+    }
+
+    table{
+        color: #706f6f;
+        font-weight: 100;
+        font-size: 15px;
+    }
+
+
+    .table-striped>tbody>tr:nth-child(2n+1)>td,
+    .table-striped>tbody>tr:nth-child(2n+1)>th {
+      background-color: #9b9b9b02;
+    }
+    
+    .table-striped>tbody>tr:nth-child(2n)>td,
+    .table-striped>tbody>tr:nth-child(2n)>th {
+      background-color: #9b9b9b00;
+    }
+
+    .table-striped>thead>tr>th {
+        font-weight: 400;
+
+        &:hover{
+            color: #ef4136; 
+        }
+    }
+
+    .table-striped>tbody>tr>td,
+    .table-striped>tbody>tr>th,
+    .table-striped>tfoot>tr>td,
+    .table-striped>tfoot>tr>th,
+    .table-striped>thead>tr>td,
+    .table-striped>thead>tr>th {
+      border: none;
+    }
+    
+    .form-input{
+        width: 75%;
+    }
+    .input-filter{
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 100;
+        font-size: 20px; 
+        width: 100%;
+        border-radius: 50px;
+        height: 50px;
+        background: #f0f0f0;
+        border: none;
+        padding-left: 20px;
+        color: #706f6f;
+        margin-bottom: 20px;
+        &:focus{
+            outline: #ffffff00;
+        }
+    }
+
+    .btn-white, .btn-gray{
+        color:#ef4136;
+        border: 1px solid #ef4136;
+        font-weight: 200;
+        font-family: 'Work Sans', sans-serif;    
+        padding: 0px 25px 0px 25px;
+        margin-left: 10px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 50px;
+
+        &:hover{
+            background: #ef4136;
+            color: #fff;
+        }
+    }
+
+    .btn-gray{
+        border: 1px solid #706f6f;
+        color: #706f6f;
+        background: #fff;
+
+        &:hover{
+            border: 1px solid #706f6f;
+            color: #fff;
+            background: #706f6f;
+        }
+    }
+    
+    .icone{
+        padding-top: 3px;
+        margin-right: 7px;
+    }
+
+    .icons-action{
+        cursor: pointer;
+        margin-left: 10px;
+        color: #a1a0a0; 
+        &:hover{
+            opacity: 0.3;
+        }
+    }
+    .t{
+        color: #ef4136;
+    }
+
+    .cp {
+        cursor: pointer;
+    }
+}

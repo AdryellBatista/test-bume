@@ -1,0 +1,64 @@
+#assignment-form{
+    font-family: 'Work Sans', sans-serif; 
+    .title{
+        padding-top: 50px;
+        color: #ef4136;
+        font-size: 50px;
+        font-weight: 200;
+        width: 950%;
+        text-align: center;
+    }
+
+    input, select{
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 100;
+        width: 350px;
+        // font-size: 20px;
+        border-radius: 50px;
+        height: 45px;
+        background: #f0f0f0;
+        border: none;
+        padding-left: 20px;
+        color: #706f6f;
+        margin-bottom: 20px;
+        &:focus{
+            outline: #ffffff00;
+        }
+    }
+
+    .btn-red, .btn-gray{
+        background-color:#ef4136;
+        color: #fff;
+        font-weight: 200;
+        font-family: 'Work Sans', sans-serif;    
+        padding: 0px 25px 0px 25px;
+        margin-left: 10px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 50px;
+
+        &:hover{
+            border: 1px solid #ef4136;
+            color: #ef4136;
+            background: #fff;
+        }
+    }
+
+    .btn-gray{
+        border: 1px solid #706f6f;
+        color: #706f6f;
+        background: #fff;
+
+        &:hover{
+            border: 1px solid #706f6f;
+            color: #fff;
+            background: #706f6f;
+        }
+    }
+
+    .icone{
+        padding-top: 3px;
+        margin-left: -10px;
+        margin-right: 7px;
+    }
+}

@@ -1,0 +1,59 @@
+<div id="assignment-form">
+    <div class="d-flex">
+        <!-- <i class="material-icons">reply</i> -->
+        <div class="title">
+            {{title}} tarefa
+            <strong *ngIf="title != 'nova'">#{{objForm.controls.id.value}}</strong>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center pt-4">
+        <form [formGroup]="objForm" >
+            <div class="form-group">
+                <label for="title">título</label>
+                <input type="text" class="form-control" id="title" formControlName="title" placeholder="escreva o título">
+            </div>
+
+            <div class="form-group">
+                <label for="description">descrição</label>
+                <input type="text" class="form-control" id="description"  formControlName="description" placeholder="escreva a descrição">
+            </div>
+
+            <div class="form-group">
+                <label for="priority">prioridade</label>
+                <select class="form-control" id="priority" formControlName="priority">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="status">status</label>
+                <select class="form-control" id="status" formControlName="status">
+                    <option value="0">aberta</option>
+                    <option value="1">concluída</option>
+                </select>
+            </div>
+            <div class="form-group" *ngIf="title != 'nova'">
+                <label for="create_date">data de criação</label>
+                <input type="text" class="form-control" id="create_date"  formControlName="create_date" disabled>
+            </div>
+            <div class="form-group pt-4" style="text-align: center;">
+                <button class="btn btn-gray" (click)="toBack()">
+                    <div class="d-flex">
+                        <div class="icone"><i class="material-icons">navigate_before</i></div>
+                        <div>voltar</div>
+                    </div>
+                </button>
+                <button class="btn btn-red" (click)="save()">
+                    <div class="d-flex">
+                        <div class="icone"><i class="material-icons">add</i></div>
+                        <div>salvar</div>
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
